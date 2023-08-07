@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>javascript course </title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <style>
+    .info-box {
+        margin-bottom: 20px;
+    }
+    h2 {
+        font-size: 18px;
+        font-family: Arial, sans-serif;
+    }
+    p, ul {
+        font-size: 14px;
+        font-family: Arial, sans-serif;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light " >
+      <a class="navbar-brand logo" href="{{ url_for('index') }}">Learn Better</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+      <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item ">
+            <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ url_for('courses') }}">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('about')}}">ABOUT Us</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('contact')}}">CONTACT Us</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="{{ url_for('dashboard') }}">Dashboard</a>
+          </li>
+          </ul>
+      </div>
+    </nav>
+      <div class="info-box">
+        <h2>About the Course</h2>
+        <p>This is for beginners to learn Javascript. </p>
+        <ul>
+            <li>Duration: 8 weeks</li>
+            <li>Time commitment: 4-5 hours per week</li>
+            <li>Prerequisites: HTML and CSS</li>
+        </ul>
+        </div>
+        <div class="info-box">
+        <h2>What You'll Learn</h2>
+        <ul>
+            <li>The fundamentals of Javascript</li>
+            <li>Conditionals and functions</li>
+            <li>Loops , Iterators , Objects</li>
+            <li>Simple application of Javascript in a web page </li>
+
+        </ul>
+        </div>
+
+        <div class="info-box">
+            <h2>Course Description</h2>
+            <p>JavaScript is a text-based programming language that can be used on both the client and server sides to create dynamic website content. JavaScript is one of the world’s most used programing languages. In this course offered by Learn Better, students will be guided through all Java Script concepts step-by-step and will be given practical plus hands on experience and challenges. The project-based methodology we follow will help you nurture and reinforce your skills.
+                <br/>
+                In this online course, you will be learning code editors, developer console, manuals and specifications. In addition to that we offer Shareable certificates for specialization and courses, Course Videos & Texts with the Option of Self-Paced Learning and Practice tests.
+                </p>
+            </div>
+      <footer class="footer bg-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h4>Quick Links</h4>
+              <ul class="list-unstyled">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('courses') }}">Courses</a></li>
+                <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+              <h4>Stay Connected</h4>
+              <ul class="list-unstyled">
+                <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <hr>
+              <p class="text-center">Copyright &copy; 2023
+                <a href="#">Learn Better</a> - All Rights Reserved.
+                <br>
+                Example Company Name
+                <br>
+                1234 Main Street, Suite 567
+                <br>
+                Anytown, USA 12345 </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+  </div>
+
+  <script>
+   // Add event listener to change font size and font family on hover
+$('.info-box').hover(function () {
+    $(this).find('h2').css('font-size', '24px');
+    $(this).find('p, ul').css({'font-size': '18px', 'color': 'brown'});
+    $(this).find('p, ul').css('color', 'brown');
+
+    $(this).find('h2, p, ul').css('font-family', 'Georgia, serif');
+}, function () {
+    // Reset the styles on mouseout (hover out)
+    $(this).find('h2').css('font-size', '18px');
+    $(this).find('p, ul').css({'font-size': '14px', 'color': 'black'});
+    $(this).find('p, ul').css('color', 'black');
+
+    $(this).find('h2, p, ul').css('font-family', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif');
+});
+
+ 
+
+</script>
+  <!-- Include Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About us</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+
+
+</head>
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light " >
+      <a class="navbar-brand logo" href="{{ url_for('index') }}">Learn Better</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+      <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item ">
+            <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('courses') }}">Courses</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ url_for('about')}}">ABOUT Us</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('contact')}}">CONTACT Us</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="{{ url_for('dashboard') }}">Dashboard</a>
+          </li>
+          </ul>
+      </div>
+    </nav>
+      <div class="card">
+        <div class="card-header mission-vision-container">
+          Our Mission and Vision       
+         </div>
+        <div class="card-body mission-vision-text text-info ">
+          <p id="mission_content">Our mission is to empower individuals with the knowledge and skills necessary to become proficient in web development. We believe that everyone deserves access to quality education, and we strive to make our courses accessible and affordable to anyone who is interested in learning. Through our courses, we aim to inspire creativity, encourage innovation, and equip our students with the tools they need to succeed in the ever-evolving world of web development.</p>
+          <button id="load-more-btn1" class="btn btn-link" >Load More</button>
+          <br />
+          <br />
+          <p id="vision_content">Our vision is to become a leading online learning platform for web development, known for our high-quality courses, innovative teaching methods, and exceptional student support. We aim to create a community of learners who are passionate about web development and who support and learn from one another. We believe that our courses can transform lives, and we are committed to making our platform accessible to anyone who wants to learn. Ultimately, our goal is to empower our students to become the next generation of web developers and digital innovators.</p>
+          <button id="load-more-btn2" class="btn btn-link"  >Load More</button>
+
+        </div>
+      </div>
+      
+   
+    <div class="container about-us-container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="about-us-box">
+            <img src="static/images/koushik.jpg" alt="Person 1">
+            <h3>Kowshik Ranga Reddy Dosakayala</h3>
+            <h3>Student</h3>
+            <p> Currently pursuing Master's in Business Analytics at the University of South Florida.
+              Has previously worked as a software engineer in developing code for applications.
+              In this project, He was mainly responsible for recreating and redesigning all the features on the
+              landing(home) page using a wide variety of CSS, JavaScript framework and bootstrap which
+              makes the user interface more interactive and attractive to the eye.
+              <br /> Was also involved collectively in creating the dashboard page for viewing data visualizations. His
+              vision going forward is to create user friendly interfaces that make websites easy to use.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="about-us-box">
+            <img src="static/images/Dhanunjan.jpeg" alt="Person 2">
+            <br /><br/>
+            <h3>Dhanunjan Reddy Raghuram</h3>
+            <h3>Student</h3><br/>
+            <p>
+              Dhanunjan is a professional with experience in the IT business, including two and a half years at Amazon
+              as a games specialist. <br /><br/>
+              He is enthusiastic about assisting learners in achieving their goals through our well-designed courses.<br /> He
+              has made major contributions to the development of our website, mainly in about us pages, as well as a
+              dark and light mode in the Contact Us page.
+              <br /><br />His passion for creating websites that exceed client expectations and provide a fantastic user
+              experience is evident in every part of our platform.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="about-us-box">
+            <img src="static/images/akash.jpeg" alt="Person 2">
+            <h3>Akash Pendekanti</h3>
+            <h3>Student</h3>
+            <p>A graduate student in Business Analytics and Information Systems at USF. He has two and half years of
+              experience in Business operations development at INFOEDGE Pvt Ltd.
+              <br />He was mainly responsible for redesigning all the three product pages using different CSS styles and
+              JavaScript frameworks. 
+              <br/>He also contributed to the dashboard page that displays the charts for
+              visualizations.
+              <br />He enjoys working on the backend of websites and is passionate about creating efficient and scalable
+              code that makes websites run smoothly.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="about-us-box">
+            <img src="static/images/jaswanth.jpeg" alt="Person 1">
+            <h3>Raj Jeshwant Kumar Bandari</h3>
+            <h3>Student</h3>
+            <p>He is pursuing Masters in Business Analytics and Information Systems at USF. He has three years of
+              experience as Senior Process Executive at Cognizant IT company.
+              His contribution include creating the Products/Courses page and a part of the About Us information page.
+              <br /> 
+              He made the interface to look easier for the user to understand and explore the content of the webpage. He
+              made modifications to the About Us page by adding the Load More features.
+              He has contributed to modifying the Products page entirely by using the nested cards.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+      <footer class="footer bg-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <h4>Quick Links</h4>
+              <ul class="list-unstyled">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+              <li><a href="{{ url_for('courses') }}">Courses</a></li>
+              <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+              <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <h4>Stay Connected</h4>
+              <ul class="list-unstyled">
+                <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <hr>
+              <p class="text-center">Copyright &copy; 2023
+                <a href="#">Learn Better</a> - All Rights Reserved.
+                <br>
+                Example Company Name
+                <br>
+                1234 Main Street, Suite 567
+                <br>
+                Anytown, USA 12345 </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+  </div>
+  <script>
+    // Select the content element and the "Load More" button
+const content_m = document.getElementById('mission_content');
+const content_v = document.getElementById('vision_content');
+
+const loadMoreBtn1 = document.getElementById('load-more-btn1');
+const loadMoreBtn2= document.getElementById('load-more-btn2');
+
+
+// Set the maximum number of characters to show initially
+const maxLength = 115;
+
+// Get the content text and truncate it
+const contentText = content_m.textContent.trim();
+const truncatedText_m = contentText.substring(0, maxLength+2);
+
+// Set the truncated text as the content of the element
+content_m.textContent = truncatedText_m;
+
+
+
+
+// Add a click event listener to the "Load More" button
+loadMoreBtn1.addEventListener('click', () => {
+  // If the content is already fully displayed, return early
+  if (content_m.textContent === contentText) {
+    return;
+  }
+  // Otherwise, show more content
+  content_m.textContent = contentText;
+  loadMoreBtn1.hidden =true
+});
+
+  // Get the content text and truncate it
+const contentText_v = content_v.textContent.trim();
+const truncatedText_v = contentText_v.substring(0, maxLength);
+
+// Set the truncated text as the content of the element
+content_v.textContent = truncatedText_v;
+// Add a click event listener to the "Load More" button
+loadMoreBtn2.addEventListener('click', () => {
+  // If the content is already fully displayed, return early
+  if (content_v.textContent === contentText_v) {
+    return;
+  }
+  // Otherwise, show more content
+  content_v.textContent = contentText_v;
+  loadMoreBtn2.hidden =true
+
+});
+
+  </script>
+
+  <!-- Include Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+

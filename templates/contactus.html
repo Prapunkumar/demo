@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>/* Dark mode styles */
+    body.dark-mode {
+        background-color: #222;
+        color: red;
+    }
+    
+    /* Light mode styles */
+    body.light-mode {
+        background-color: #fff;
+        color: #222;
+        background-image: none;
+  
+    }
+    
+    #dark-mode-btn , #light-mode-btn{
+      float:right
+    }
+    .form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+  </style>
+    
+</head>
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light " >
+      <a class="navbar-brand logo" href="{{ url_for('index') }}">Learn Better</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+      <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('courses') }}">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('about')}}">ABOUT Us</a>
+          </li>
+          <li class="nav-item active">
+              <a class="nav-link" href="{{ url_for('contact')}}">CONTACT Us</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="{{ url_for('dashboard') }}">Dashboard</a>
+          </li>
+          </ul>
+      </div>
+    </nav>
+      <button id="dark-mode-btn">Dark Mode</button>
+      <button id="light-mode-btn">Light Mode</button>
+      <div class="info-box">
+        <h2>Contact Us Form</h2>
+        <p>You can reach us by filling out the below form for any queries or technical support</p>
+        </div>
+    <div class="contact_us_form">
+      <form method="post" action="{{ url_for('contact') }}">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+      <footer class="footer bg-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h4>Quick Links</h4>
+              <ul class="list-unstyled">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('courses') }}">Courses</a></li>
+                <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+              <h4>Stay Connected</h4>
+              <ul class="list-unstyled">
+                <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <hr>
+              <p class="text-center">Copyright &copy; 2023
+                <a href="#">Learn Better</a> - All Rights Reserved.
+                <br>
+                Example Company Name
+                <br>
+                1234 Main Street, Suite 567
+                <br>
+                Anytown, USA 12345 </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+  </div>
+
+
+    <script>
+        // Dark mode
+        $('#dark-mode-btn').on('click', function () {
+            $('body').addClass('dark-mode');
+        });
+  
+        // Light mode
+        $('#light-mode-btn').on('click', function () {
+            $('body').removeClass('dark-mode');
+        });
+    
+</script>
+
+  <!-- Include Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+
